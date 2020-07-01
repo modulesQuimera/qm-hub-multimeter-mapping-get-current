@@ -1,0 +1,56 @@
+<script type="text/html" data-template-name="mapping-get-current">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" style="width:87%; margin-left: -45px">
+    </div>
+    <h2>SLOT 1 Multimeter modular mapping - getCurrent</h2>
+    <div class="form-row">
+        <!-- <label for="node-config-input-labelPort1"><i class="fa fa-tags"></i> Label</label> -->
+        <label> IAPW - </label><input type="text" id="node-config-input-labelPort1" style="width:15%; margin-left: -45px">
+        <!-- <label style="margin-left:100px" style="margin-left:100px" for="node-config-input-valuePort1"><i class="fa fa-pencil"></i> Value</label>
+        <input type="text" id="node-config-input-valuePort1" style="width:15%; margin-left: -45px"> -->
+    </div>
+    <div class="form-row">
+        <!-- <label for="node-config-input-labelPort2"><i class="fa fa-tags"></i> Label</label> -->
+        <label> IBPW - </label><input type="text" id="node-config-input-labelPort2" style="width:15%; margin-left: -45px">
+        <!-- <label style="margin-left:100px" for="node-config-input-valuePort2"><i class="fa fa-pencil"></i> Value</label>
+        <input type="text" id="node-config-input-valuePort2" style="width:15%; margin-left: -45px"> -->
+    </div>
+    <div class="form-row">
+        <!-- <label for="node-config-input-labelPort3"><i class="fa fa-tags"></i> Label</label> -->
+        <label> ICPW - </label><input type="text" id="node-config-input-labelPort3" style="width:15%; margin-left: -45px">
+        <!-- <label style="margin-left:100px" for="node-config-input-valuePort3"><i class="fa fa-pencil"></i> Value</label>
+        <input type="text" id="node-config-input-valuePort3" style="width:15%; margin-left: -45px"> -->
+    </div>
+    <div class="form-row">
+        <!-- <label for="node-config-input-labelPort4"><i class="fa fa-tags"></i> Label</label> -->
+        <label> INPW - </label><input type="text" id="node-config-input-labelPort4" style="width:15%; margin-left: -45px">
+        <!-- <label style="margin-left:100px" for="node-config-input-valuePort4"><i class="fa fa-pencil"></i> Value</label>
+        <input type="text" id="node-config-input-valuePort4" style="width:15%; margin-left: -45px"> -->
+    </div>
+</script>
+
+<script type="text/html" data-help-name="mapping-get-current">
+    <p>working on it...</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('mapping-get-current',{
+        category: 'config',
+        defaults: {
+            name: {value:"Multimeter modular slot 1 mapping - getCurrent"},
+            labelPort1: {value:"TP", required: true},
+            valuePort1: {value:"0", required: true},
+
+            labelPort2: {value:"TP", required: true},
+            valuePort2: {value:"1", required: true},
+
+            labelPort3: {value:"TP", required: true},
+            valuePort3: {value:"2", required: true},
+            
+            labelPort4: {value:"TP", required: true},
+            valuePort4: {value:"3", required: true}
+        },
+        label: function() { return this.name || "" },
+    });
+</script>

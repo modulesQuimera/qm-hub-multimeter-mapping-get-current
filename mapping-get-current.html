@@ -1,3 +1,27 @@
+<style>
+    .label-resp{
+        width: 40% !important;
+    }
+
+    .input-resp-curr{
+        width: 27% !important;
+        /* margin-left: -45px !important; */
+    }
+
+    /* .divA {
+        width: 50% !important;
+        float: left !important;
+    }
+
+    .divB {
+        width: 49% !important;
+        float: left !important;
+    } */
+</style>
+
+
+
+
 <script type="text/html" data-template-name="mapping-get-current">
     <!-- <div class="form-row">
         <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
@@ -5,16 +29,16 @@
     </div> -->
     <h2>SLOT 1 Multimeter modular mapping - getCurrent</h2>
     <div class="form-row">
-        <label> IAPW - </label><input type="text" id="node-config-input-labelPort1" style="width:15%; margin-left: -45px">
+        <label class="label-resp"> IAPW - </label><input maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort1" style=" margin-left: -45px">
     </div>
     <div class="form-row">
-        <label> IBPW - </label><input type="text" id="node-config-input-labelPort2" style="width:15%; margin-left: -45px">
+        <label class="label-resp"> IBPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort2" style=" margin-left: -45px">
     </div>
     <div class="form-row">
-        <label> ICPW - </label><input type="text" id="node-config-input-labelPort3" style="width:15%; margin-left: -45px">
+        <label class="label-resp"> ICPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort3" style=" margin-left: -45px">
     </div>
     <div class="form-row">
-        <label> INPW - </label><input type="text" id="node-config-input-labelPort4" style="width:15%; margin-left: -45px">
+        <label class="label-resp"> INPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort4" style=" margin-left: -45px">
     </div>
 </script>
 

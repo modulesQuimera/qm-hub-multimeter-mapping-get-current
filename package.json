@@ -1,5 +1,5 @@
 {
-  "name": "qm-hub-multimeter-mapping-get-current",
+  "name": "qm-multimeter-mapping-get-current",
   "version": "1.0.3",
   "description": "multimeter get-current mapping module - NodeRed",
   "main": "mapping-get-current.js",

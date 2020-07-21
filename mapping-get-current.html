@@ -1,6 +1,6 @@
 <style>
-    .label-resp{
-        width: 40% !important;
+    .label-resp-current{
+        width: 22% !important;
     }
 
     .input-resp-curr{
@@ -23,22 +23,27 @@
 
 
 <script type="text/html" data-template-name="mapping-get-current">
-    <!-- <div class="form-row">
-        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-config-input-name" style="width:87%; margin-left: -45px">
-    </div> -->
+    <div class="form-row columm">
+        <label  for="node-config-input-name"><i class="fa fa-tag"></i> Mapping Name</label>
+        <input type="text" id="node-config-input-name" style="width:80%;">
+    </div>
+    <div class="form-row columm">
+        <label  for="node-config-input-slot"><i class="fa fa-sliders"></i> Slot</label>
+        <input min="0" type="number" id="node-config-input-slot" style="width:20%;">
+    </div>
+    <hr class="hr-full">
     <h2>SLOT 1 Multimeter modular mapping - getCurrent</h2>
     <div class="form-row">
-        <label class="label-resp"> IAPW - </label><input maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort1" style=" margin-left: -45px">
+        <label class="label-resp-current"> IAPW - </label><input maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort1" style=" margin-left: -45px">
     </div>
     <div class="form-row">
-        <label class="label-resp"> IBPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort2" style=" margin-left: -45px">
+        <label class="label-resp-current"> IBPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort2" style=" margin-left: -45px">
     </div>
     <div class="form-row">
-        <label class="label-resp"> ICPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort3" style=" margin-left: -45px">
+        <label class="label-resp-current"> ICPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort3" style=" margin-left: -45px">
     </div>
     <div class="form-row">
-        <label class="label-resp"> INPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort4" style=" margin-left: -45px">
+        <label class="label-resp-current"> INPW - </label><input  maxlength="8" class="input-resp-curr" type="text" id="node-config-input-labelPort4" style=" margin-left: -45px">
     </div>
 </script>
 
@@ -50,18 +55,20 @@
     RED.nodes.registerType('mapping-get-current',{
         category: 'config',
         defaults: {
-            name: {value:"Multimeter modular slot 1 mapping - getCurrent"},
-            labelPort1: {value:"TP", required: true},
-            valuePort1: {value:"0", required: true},
-
-            labelPort2: {value:"TP", required: true},
-            valuePort2: {value:"1", required: true},
-
-            labelPort3: {value:"TP", required: true},
-            valuePort3: {value:"2", required: true},
+            name: {value:""},
+            slot: {value:"", required:true},
             
-            labelPort4: {value:"TP", required: true},
-            valuePort4: {value:"3", required: true}
+            labelPort1: {value:""},
+            valuePort1: {value:"0"},
+
+            labelPort2: {value:""},
+            valuePort2: {value:"1"},
+
+            labelPort3: {value:""},
+            valuePort3: {value:"2"},
+            
+            labelPort4: {value:""},
+            valuePort4: {value:"3"}
         },
         label: function() { return this.name || "" },
     });
